@@ -1,8 +1,9 @@
 # obscure
 
-an simple CLI to interact with Obsidian
-on the command line to make it easier to interact with it and also to
-make it easier to export a directed knowledge graph.
+<img src="./public/obscura.jpg" height="200" width="200" />
+
+an simple CLI to interact with Obsidian that ingests your Markdown documents into a embedding database
+and provides insights and analytics on your data and
 
 To install dependencies:
 
@@ -18,19 +19,15 @@ bun run src/index.ts
 
 This project was created using `bun init` in bun v1.3.9. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
 
-## New files
+## Files
 
-src/types.ts — shared DocumentChunk, MarkdownChunkMetadata, QueryResult interfaces
-src/command/ingest.ts — obscure ingest `<directory>` command
-src/command/query.ts — obscure query `<text>` command
-
-## Updated files
-
-src/utils.ts — walkMarkdownFiles, chunkMarkdown (with frontmatter stripping, heading-based splitting, hidden dir filtering)
-src/db/client.ts — getOrCreateCollection with DefaultEmbeddingFunction; safe to run multiple times
-src/db/addData.ts — addDocuments using upsert (idempotent re-runs)
-src/index.ts — registers all three commands
-Usage (requires ChromaDB running locally on port 8000):
+- src/types.ts — shared DocumentChunk, MarkdownChunkMetadata, QueryResult interfaces
+- src/command/ingest.ts — obscure ingest `<directory>` command
+- src/command/query.ts — obscure query `<text>` command
+- src/utils.ts — walkMarkdownFiles, chunkMarkdown (with frontmatter stripping, heading-based splitting, hidden dir filtering)
+- src/db/client.ts — getOrCreateCollection with DefaultEmbeddingFunction; safe to run multiple times
+- src/db/addData.ts — addDocuments using upsert (idempotent re-runs)
+- src/index.ts — registers all three commands
 
 ## Commands
 
