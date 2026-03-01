@@ -1,0 +1,21 @@
+{
+  "name": "obscure",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "obscure": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.4",
+    "@types/commander": "^2.12.5",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3"
+  }
+}
