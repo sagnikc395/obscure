@@ -2,7 +2,8 @@
 
 <img src="./public/obscura.jpg" height="200" width="200" />
 
-an simple CLI to interact with Obsidian that ingests your Markdown documents into a embedding database
+(read as obs-cure)
+obscure is an simple CLI to interact with Obsidian that ingests your Markdown documents into a embedding database
 and provides insights on your data and helps builds an knowledge graph from it.
 
 To install dependencies:
