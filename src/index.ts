@@ -1,5 +1,7 @@
 import { Command } from "commander";
 import { loadCommands } from "./command/github";
+import { loadIngestCommand } from "./command/ingest";
+import { loadQueryCommand } from "./command/query";
 
 const program = new Command();
 program
@@ -10,4 +12,6 @@ program
   .version("1.0.0");
 
 loadCommands(program);
+loadIngestCommand(program);
+loadQueryCommand(program);
 program.parse(Bun.argv);

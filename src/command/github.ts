@@ -7,3 +7,5 @@ export function loadCommands(program: Command) {
       console.log("GitHub command loaded");
     });
 }
+
+// add or push the knowledge graph to github
