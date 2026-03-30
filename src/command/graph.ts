@@ -81,19 +81,4 @@ export function loadGraphCommand(program: Command) {
       printNeighbors(kg, note);
     });
 
-  graph
-    .command("serve")
-    .description("Launch interactive graph visualization in the browser")
-    .argument("<directory>", "Path to Obsidian vault")
-    .option("-p, --port <number>", "Port to serve on", "3000")
-    .action(async (directory: string, options: { port: string }) => {
-      const absDir = resolve(directory);
-      console.log(chalk.blue(`Building graph from: ${absDir}`));
-      const kg = await buildGraph(absDir);
-
-      const port = parseInt(options.port, 10);
-
-      const { startGraphServer } = await import("../graph/server");
-      await startGraphServer(kg, port);
-    });
 }
