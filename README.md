@@ -5,19 +5,46 @@
 obscure is an simple CLI to interact with Obsidian that ingests your Markdown documents into a embedding database
 and provides insights on your data and helps builds an knowledge graph from it.
 
-To install dependencies:
+## Setup
+
+### Prerequisites
+
+- [Bun](https://bun.sh) (v1.3.9+)
+- [Docker](https://docs.docker.com/get-docker/)
+
+### 1. Install dependencies
 
 ```bash
 bun install
 ```
 
-To run:
+### 2. Start ChromaDB
+
+```bash
+docker compose up -d
+```
+
+This starts a ChromaDB instance on port 8000 with persistent storage.
+
+### 3. Configure environment
+
+Copy the example env file and adjust if needed:
+
+```bash
+cp .env.example .env
+```
+
+Default `.env`:
+
+```
+CHROMA_HOST=http://localhost:8000
+```
+
+### 4. Run
 
 ```bash
 bun run src/index.ts
 ```
-
-This project was created using `bun init` in bun v1.3.9. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
 
 ## Files
 
