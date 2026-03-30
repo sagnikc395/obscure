@@ -13,7 +13,7 @@ export function startWatcher(vaultDir: string, verbose: boolean = false) {
   // Debounce map to avoid duplicate events
   const pending = new Map<string, ReturnType<typeof setTimeout>>();
 
-  const watcher = watch(absDir, { recursive: true }, (event, filename) => {
+  const watcher = watch(absDir, { recursive: true }, (_event, filename) => {
     if (!filename || !filename.endsWith(".md")) return;
     // Skip hidden directories
     if (filename.split("/").some((part) => part.startsWith("."))) return;

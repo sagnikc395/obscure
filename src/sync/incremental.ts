@@ -4,7 +4,6 @@ import chalk from "chalk";
 import { walkMarkdownFiles, chunkMarkdown } from "../utils";
 import { addDocuments } from "../db/addData";
 import { loadManifest, saveManifest } from "./manifest";
-import type { SyncManifest } from "../types";
 
 interface SyncResult {
   added: number;

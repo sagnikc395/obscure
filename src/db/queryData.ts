@@ -1,9 +1,10 @@
-import { collection } from "./client";
+import { getCollection } from "./client";
 
 export async function queryData(
   query: string[],
   nResults: number,
 ): Promise<Object> {
+  const collection = await getCollection();
   const results = await collection.query({
     queryTexts: query,
     nResults: nResults,
